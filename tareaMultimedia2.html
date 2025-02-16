@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablas y Multimedia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .titulo-principal {
+            color: #00008B; /* Azul oscuro */
+            text-decoration: underline;
+        }
+        .titulo-contactos {
+            color: #006400; /* Verde oscuro */
+            text-decoration: underline;
+        }
+        .titulo-galeria {
+            color: #8B0000; /* Rojo oscuro */
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Tablas y Multimedia</h1>
+        <h1 class="text-center titulo-principal">Tablas y Multimedia</h1>
 
         <!-- Tabla -->
-        <h2 class="mt-4">Lista de Contactos</h2>
+        <h2 class="mt-4 titulo-contactos">Lista de Contactos</h2>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
@@ -22,7 +36,6 @@
                     <th>Teléfono</th>
                     <th>Ciudad</th>
                     <th>Código Postal</th>
-
                 </tr>
             </thead>
             <tbody>
@@ -39,16 +52,25 @@
                     <td>2</td>
                     <td>María Gracia</td>
                     <td>López</td>
-                    <td>mariagralopez@example.com</td>
+                    <td class="table-warning">mariagralopez@example.com</td>
                     <td>0987654321</td>
                     <td>Mendoza</td>
                     <td>5500</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos Alberto</td>
+                    <td>García Lange</td>
+                    <td class="table-warning">charlygarcia@example.com</td>
+                    <td>2468135790</td>
+                    <td>Guaymallén</td>
+                    <td>5519</td>
                 </tr>
             </tbody>
         </table>
 
         <!-- Galería de imágenes -->
-        <h2 class="mt-4">Galería de Imágenes</h2>
+        <h2 class="mt-4 titulo-galeria">Galería de Imágenes</h2>
         <div class="row">
             <div class="col-6 col-md-4 mb-3">
                 <img src="https://via.placeholder.com/150" class="img-fluid rounded" alt="Ejemplo 1">
@@ -70,3 +92,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

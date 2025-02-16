@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas y Multimedia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         .titulo-principal {
+            color: #000000; /* Negro */
+            text-decoration: underline;
+        }
+        .titulo-inventario {
+            color: #00008B; /* Azul oscuro */
+            text-decoration: underline;
+        }
+        .titulo-contactos {
+            color: #006400; /* Verde oscuro */
+            text-decoration: underline;
+        }
+        .titulo-galeria {
+            color: #8B0000; /* Rojo oscuro */
+            text-decoration: underline;
+        }
+    
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #dee2e6 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center titulo-principal">Tablas y Multimedia</h1>
+
+        <!-- Tabla de Inventario -->
+        <h2 class="mt-4 titulo-inventario">Inventario</h2>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio por unidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lapiceras</td>
+                    <td>50</td>
+                    <td>$ 250.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cuadernos</td>
+                    <td>30</td>
+                    <td>$ 5000.00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Goma de borrar</td>
+                    <td>100</td>
+                    <td>$100.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabla de Usuarios Registrados -->
+        <h2 class="mt-4 titulo-contactos">Usuarios Registrados</h2>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Ciudad</th>
+                    <th>Código Postal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez (hijo)</td>
+                    <td class="table-warning">juanperezh@example.com</td>
+                    <td>1234567890</td>
+                    <td>Maipú</td>
+                    <td>5511</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María Gracia</td>
+                    <td>López</td>
+                    <td class="table-warning">mariagralopez@example.com</td>
+                    <td>0987654321</td>
+                    <td>Mendoza</td>
+                    <td>5500</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Carlos Alberto</td>
+                    <td>García Lange</td>
+                    <td class="table-warning">charlygarcia@example.com</td>
+                    <td>2468135790</td>
+                    <td>Guaymallén</td>
+                    <td>5519</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <!-- Galería de imágenes -->
+        <h2 class="mt-4 titulo-galeria">Galería de Imágenes de Mendoza (Argentina)</h2>
+        <div class="row">
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/1190739268/photo/men-preparing-a-rib-barbecue-in-the-firewood.jpg?s=1024x1024&w=is&k=20&c=gaDa9thplQ_tlDPIbsK3gzaN-7JdQKgvXj6BVH8eVbM=" class="img-fluid rounded" alt="Ejemplo 1">
+                <figcaption class="figure-caption text-center">Un delicioso asado</figcaption>
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/102071340/es/foto/vino-tinto-en-el-vi%C3%B1edo.jpg?s=612x612&w=0&k=20&c=WC2zrNb3bVW2QxBYQsP6W_RrASxEOP6pX1sExLIqC_c=" class="img-fluid rounded" alt="Ejemplo 2">
+                <figcaption class="figure-caption text-center">Disfrutar de los mejores vinos del mundo</figcaption>
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/1169230087/es/foto/pastelitos-argentinos-tradicionales-conocidos-como-pastelitos.jpg?s=612x612&w=0&k=20&c=MRkhqc_HAag7GttlErqmBUouCNbmBaSDxVvrEXxJzYI=" class="img-fluid rounded" alt="Ejemplo 3">
+                <figcaption class="figure-caption text-center">Saborear postres regionales</figcaption>
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/181988913/es/foto/vi%C3%B1edo-en-la-cosecha-de-oto%C3%B1o.jpg?s=612x612&w=0&k=20&c=CVKzvtfigZTIOyOqrQAPnzMyegIELqjB7UFtodU2VZY=" class="img-fluid rounded" alt="Ejemplo 4">
+                <figcaption class="figure-caption text-center">Un sunset en el viñedo</figcaption>
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/1486173207/es/foto/paisaje-oto%C3%B1al-en-los-andes-mendoza-argentina.jpg?s=612x612&w=0&k=20&c=e56P2PP9MnOS4QE1g1_EUUbC6jc4SD02PteylJCBgRo=" class="img-fluid rounded" alt="Ejemplo 5">
+                <figcaption class="figure-caption text-center">No es lo mismo el otoño en Mendoza</figcaption>
+                </figure>
+            </div>
+            <div class="col-6 col-md-4 mb-3">
+                <img src="https://media.istockphoto.com/id/1273332143/es/foto/maravillosos-edificios-en-la-puesta-de-sol-de-la-ciudad-de-mendoza.jpg?s=612x612&w=0&k=20&c=W-biC_hGzw2dWKd_oYjwMnQNXAq9UhS69L1_0s1qy_I=" class="img-fluid rounded" alt="Ejemplo 6">
+                <figcaption class="figure-caption text-center">¡¡¡Por todo eso, esto es Mendoza (Argentina)!!!</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Videos -->
+        <h2 class="mt-4">Videos Incrustados</h2>
+        <div class="ratio ratio-16x9 mb-4">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de Ejemplo 1" allowfullscreen></iframe>
+        </div>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/7_Leh0bH6CA" title="Video de Ejemplo 2" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
