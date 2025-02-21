@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Avanzado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        /* Carrusel */
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Contacto */
+        #contacto i {
+            margin-right: 10px;
+        }
+
+        /* Opiniones */
+        .opinion {
+            border: 1px solid #ced4da;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .opinion .nombre {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#acerca-de">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400/007bff/FFFFFF" class="d-block w-100" alt="Imagen 1">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 1</h5>
+                        <p>Descripción de la imagen 1.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/28a745/FFFFFF" class="d-block w-100" alt="Imagen 2">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 2</h5>
+                        <p>Descripción de la imagen 2.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/dc3545/FFFFFF" class="d-block w-100" alt="Imagen 3">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 3</h5>
+                        <p>Descripción de la imagen 3.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <section id="inicio" class="section mt-4 shadow">
+            <h2 class="section-title">Inicio</h2>
+            <p>Contenido de la sección de inicio.</p>
+        </section>
+
+        <section id="acerca-de" class="section mt-4 shadow">
+            <h2 class="section-title">Acerca de</h2>
+            <p>Contenido de la sección "Acerca de".</p>
+        </section>
+
+        <section id="servicios" class="section mt-4 shadow">
+            <h2 class="section-title">Servicios</h2>
+            <p>Contenido de la sección de servicios.</p>
+        </section>
+
+        <section id="contacto" class="section mt-4 shadow">
+            <h2 class="section-title">Contacto</h2>
+            <p>Contenido de la sección de contacto.</p>
+        </section>
+    </div>
+
+    <footer class="mt-4">
+        <div class="container">
+            <p>&copy; 2023 Mi Sitio. Todos los derechos reservados. | <a href="#">Aviso legal</a> | <a
+                    href="#">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

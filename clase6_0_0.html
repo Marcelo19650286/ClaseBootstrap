@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Avanzado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .btn-cta {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        /* Carrusel */
+        .carousel-item img {
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 60px 40px;
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-content {
+            text-align: center;
+        }
+
+        .section-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Formulario de contacto */
+        .formulario-contacto {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .formulario-contacto input,
+        .formulario-contacto textarea {
+            margin-bottom: 10px;
+        }
+
+        /* Contacto */
+        #contacto i {
+            margin-right: 10px;
+        }
+
+        /* Opiniones */
+        .opinion {
+            border: 1px solid #ced4da;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .opinion .nombre {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#acerca-de">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <a class="btn btn-cta ms-3" href="#contacto">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400/007bff/FFFFFF" class="d-block w-100" alt="Imagen 1">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 1</h5>
+                        <p>Descripción de la imagen 1.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/28a745/FFFFFF" class="d-block w-100" alt="Imagen 2">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 2</h5>
+                        <p>Descripción de la imagen 2.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/dc3545/FFFFFF" class="d-block w-100" alt="Imagen 3">
+                    <div class="carousel-caption">
+                        <h5>Título de la imagen 3</h5>
+                        <p>Descripción de la imagen 3.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <section id="inicio" class="section mt-4 shadow">
+            <h2 class="section-title">Inicio</h2>
+            <div class="section-content">
+                <p>Bienvenido a nuestro sitio web. Aquí encontrarás información relevante sobre nuestros servicios y cómo podemos ayudarte a alcanzar tus objetivos.</p>
+            </div>
+        </section>
+
+        <section id="acerca-de" class="section mt-4 shadow">
+            <h2 class="section-title">Acerca de</h2>
+            <div class="section-content">
+                <p>Somos una empresa dedicada a ofrecer soluciones innovadoras para tus necesidades. Con años de experiencia en la industria, nos destacamos por nuestro compromiso y calidad.</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="section mt-4 shadow">
+            <h2 class="section-title">Servicios</h2>
+            <div class="section-content">
+                <p>Ofrecemos una variedad de servicios diseñados para satisfacer tus requerimientos, desde consultoría hasta desarrollo de proyectos personalizados.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="section mt-4 shadow">
+            <h2 class="section-title">Contacto</h2>
+            <div class="section-content">
+                <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de los siguientes medios:</p>
+                <p><i class="fas fa-envelope"></i> contacto@misitio.com</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <form class="formulario-contacto" action="URL_A_DONDE_SE_ENVIA_EL_FORMULARIO" method="POST">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="mt-4">
+        <div class="container">
+            <p>&copy; RMCR 2025. Todos los derechos reservados. | <a href="#">Aviso legal</a> | <a href="#">Política de privacidad</a></p>
+            <div class="social-icons mt-3">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
